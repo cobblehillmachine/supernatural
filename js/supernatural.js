@@ -33,21 +33,19 @@ function setInputFieldFunctions(){
 }
 
 function showFooter() {
-	$('#footer #mobile-tab.closed').on({
-		click: function() {
-		$('#footer .footer-arrow').addClass('up'); 
+
+	var toggleState = true;
+	$('#footer #mobile-tab').on("click", function() {
+	  if(toggleState) {
+	    $('#footer .footer-arrow').addClass('up');
 		$('#footer #mobile-nav').slideToggle();
-		$(this).removeClass('closed');
-		$(this).addClass('open');
-	}
+		$('.arrow-down').hide();
+	  } else {
+    	$('#footer .footer-arrow').removeClass('up'); 
+		$('#footer #mobile-nav').slideToggle();
+		$('.arrow-down').show();
+	  }
+	  toggleState = !toggleState;
 	});
-	// $('#footer #mobile-tab.open').on({
-	// 	click: function(){
-	// 	$('#footer .footer-arrow').removeClass('up'); 
-	// 	$('#footer #mobile-nav').slideToggle();
-	// 	$(this).removeClass('open');
-	// 	$(this).addClass('closed');
-	// }
-	// });
 	
 }

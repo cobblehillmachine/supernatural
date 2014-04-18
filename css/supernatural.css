@@ -3,6 +3,7 @@
 @font-face {font-family: 'Helvetica LT Std Light Condensed';font-style: normal;font-weight: normal;src: local('Helvetica LT Std Light Condensed'), url('/fonts/HelveticaLTStd-LightCond.woff') format('woff');}
 
 body {margin:0; padding:0; width:100%; min-width:320px; font:normal 17px 'Helvetica LT Std Light Condensed'; color:#231f20;}
+a {outline:0;}
 a img {border:0;}
 img {vertical-align:top; max-width:100%; width:100%; height:auto;}
 p {margin:0; float:left; width:100%;}
@@ -24,16 +25,20 @@ input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px white inset;}
 #header .social-cont #twitter {background-position:-71px 0; margin-right:0; width:20px;}
 
 /*FOOTER*/
-#footer {position:fixed; bottom:0; width:100%; height:175px; background:#231f20; left:0; color:#fff; border-top:3px solid #fff; padding-top:60px;}
-#footer .footer-box {width:20%; float:left; text-transform:lowercase; padding-left:25px;}
+#footer {position:fixed; bottom:0; width:100%; background:#231f20; left:0; color:#fff; border-top:3px solid #fff; padding-top:20px;}
+#footer .footer-box {width:25%; float:left; text-transform:lowercase; padding-left:25px; margin-top:10px;}
 #footer .footer-box a {color:#fff; text-decoration:none;}
-#footer .footer-arrow {background:url(../images/arrow-white.png) 0 -15px no-repeat; float:right; width:16px; height:15px; margin-top:2px;}
+#footer .footer-arrow {background:url(../images/arrow-white.png) 0 -15px no-repeat; float:right; width:16px; height:15px; margin-top:4px;}
 #footer .footer-arrow.up {background-position:0 0;}
+#footer #mobile-tab {position:relative; float:left; text-align:center; width:100%; background:#231f20; cursor:pointer; padding-bottom:5px;}
+#footer #mobile-tab .inline {display:inline-block; text-align:center;}
+#footer #mobile-tab .inline h3 {float:left; margin-right:35px; width:auto;}
+#footer #mobile-nav .footer-box:last-child {margin-bottom:35px;}
 
 /*SECTIONS */
 #section0 .inline-cont {position:absolute; width:680px; text-align:center; left:calc(50% - 340px); top:25%;}
 #section0 #logo {position:absolute; background:url(../images/logo.png) no-repeat; width:105px; height:86px; left:calc(50% - 52px); top:10%;}
-#tagline {font:normal 38px 'Helvetica LT Std Black Condensed'; margin:0; text-transform:uppercase; max-width:675px;}
+#tagline {font:normal 35px 'Helvetica LT Std Black Condensed'; margin:0; text-transform:uppercase; max-width:675px;}
 #tagline p {font-size:16px; margin-top:15px;}
 #section1 .cont-right {color:#fff; float:right; max-width:500px;}
 #section1 .cont-right a {text-decoration:underline; color:#fff;}
@@ -59,15 +64,16 @@ img.bg {position:fixed; top:50px; left:0;}
 /*REUSABLE*/
 .mid-cont {position:relative; max-width:1070px; margin:auto; width:100%; padding:0 25px;}
 #section0 {text-align:center;}
-.mobile {display:none;}
-.wrap {float:left; position:relative; width:100%;}
+.mobile, #mobile-nav {display:none;}
+.wrap, #footer #mobile-nav {float:left; position:relative; width:100%;}
 h1, h2, h3 {font-family:'Helvetica LT Std Black Condensed'; text-transform:uppercase; font-weight:normal; float:left; width:100%; margin-top:0;}
 h1 {font-size:42px;}
 h2 {font-size:22px;}
 h3 {font-size:26px; margin:0;}
 label {font-size:16px; font-family: 'Helvetica LT Std Black Condensed'; float:left; width:100%; text-transform:uppercase;}
-#header .social-cont .social-icon:hover, #footer .footer-box a:hover, .arrow-down:hover .arrow, #section1 .cont-right a:hover, #mc_embed_signup input[type="submit"]:hover {opacity:.8; filter:alpha(opacity=80);}
-.arrow-down {position:fixed; bottom:175px; background:url(../images/arrow-bg.png) no-repeat; width:86px; height:43px; left:calc(50% - 43px); z-index:-1;}
+#header .social-cont .social-icon:hover, #footer .footer-box a:hover, .arrow-down:hover .arrow, #mc_embed_signup input[type="submit"]:hover {opacity:.8; filter:alpha(opacity=80);}
+#section1 .cont-right a:hover {text-decoration:none;}
+.arrow-down {position:fixed; bottom:66px; background:url(../images/arrow-bg.png) no-repeat; width:86px; height:43px; left:calc(50% - 43px); z-index:-1;}
 .arrow-up {position:fixed; top:50px; background:url(../images/arrow-bg.png) 0 -43px no-repeat; width:86px; height:43px; left:calc(50% - 43px); z-index:-1}
 .arrow-up .arrow {margin:5px 0 0 30px; -webkit-transform: rotate(-90deg);-moz-transform: rotate(-90deg);-ms-transform: rotate(-90deg);-o-transform: rotate(-90deg);filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-3);}
 .arrow-down .arrow {margin:20px 0 0 30px; -webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-ms-transform: rotate(90deg);-o-transform: rotate(90deg);filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);}
@@ -87,7 +93,7 @@ label {font-size:16px; font-family: 'Helvetica LT Std Black Condensed'; float:le
 /*TABLET AND MOBILE*/
 @media screen and (max-width:980px) {
 	body, html, #fullpage {overflow-y:auto !important; overflow-x:hidden;}
-	.desktop, .arrow-down, .arrow-up, #mobile-nav, #section0 p {display:none;}
+	.desktop, .arrow-down, .arrow-up, #section0 p {display:none !important;}
 	.mobile, .tableCell {display:block;}
 	.wrap {padding:35px 0; text-align:center;}
 	h1, #tagline {font-size:24px;}
@@ -96,7 +102,7 @@ label {font-size:16px; font-family: 'Helvetica LT Std Black Condensed'; float:le
 	#header, img.bg, #fullpage, .section, #section0 .inline-cont {position:relative; float:left;}
 	img.bg {top:0;}
 	#section1 .cont-right {text-align:center;}
-	#bluesign, #tagline, #section1 .cont-right, .wrap p, #footer #mobile-tab .inline, .cont-left, #section3 .cont-right {display:inline-block; float:none;}
+	#bluesign, #tagline, #section1 .cont-right, .wrap p, .cont-left, #section3 .cont-right {display:inline-block; float:none;}
 	#bluesign {margin-bottom:20px; width:100%; background-position:center 0;}
 	#header, .mid-cont {padding:0 15px;}
 	.wrap p {max-width:95%;}
@@ -106,11 +112,7 @@ label {font-size:16px; font-family: 'Helvetica LT Std Black Condensed'; float:le
 	#mc_embed_signup input[type="submit"] {margin:-30px 10px 0 0;}
 	
 	/*FOOTER*/
-	#footer {height:auto; padding-top:15px;}
-	#footer .footer-box {width:100%; padding-left:0; text-align:center; margin-top:25px;}
-	#footer #mobile-tab {position:relative; float:left; text-align:center; margin-top:-52px; bottom:14px; padding:18px 0 0; background:#231f20; cursor:pointer;}
-	#footer #mobile-tab .inline h3 {float:left; margin-right:35px; width:auto;}
-	#footer #mobile-nav .footer-box:last-child {margin-bottom:35px;}
+	#footer .footer-box {width:100%; padding-left:0; text-align:center; margin-bottom:25px;}
 	
 	/*SECTIONS*/
 	.section {background:none !important;}
