@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	if($(window).width() >= 981) {
+	if($(window).width() >= 1024) {
         $('#fullpage').fullpage();
     }
 	setInputFieldFunctions();
