@@ -1,5 +1,7 @@
 $(document).ready(function() {
-    $('#fullpage').fullpage();
+	if($(window).width() >= 981) {
+        $('#fullpage').fullpage();
+    }
 	setInputFieldFunctions();
 	showFooter();
 });

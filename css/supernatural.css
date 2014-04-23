@@ -93,7 +93,7 @@ label {font-size:16px; font-family: 'Helvetica LT Std Black Condensed'; float:le
 
 /*TABLET AND MOBILE*/
 @media screen and (max-width:980px) {
-	body, html, #fullpage {overflow-y:auto !important; overflow-x:hidden;}
+	body, html, #fullpage {overflow:scroll !important; overflow-x:hidden;}
 	.desktop, .arrow-down, .arrow-up, #section0 p {display:none !important;}
 	.mobile, .tableCell {display:block;}
 	.wrap {padding:35px 0; text-align:center;}
